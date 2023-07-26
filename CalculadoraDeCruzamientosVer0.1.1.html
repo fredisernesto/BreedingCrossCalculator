@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Calculadora de Cruzamientos</title>
+        <link rel="stylesheet" href="styles.css">
         <script type="text/javascript">
 			function croosIndexCalc() 
 			{
@@ -48,12 +50,12 @@
                     element.style.display = 'none';
 			}
 		</script>
-        <title>Calculadora de Cruzamientos</title>
     </head>
     <body>
-    <h2>Calculadora de Cruzamientos</h2>
+    <div class="container"></div>
     <form method='get' target="pantalla">
-    <fieldset align='left' style='border-style:solid; border-color:#336666; width:300px; height:150px; padding:10px; margin: 5px;'>
+    <fieldset class="fieldset-style">
+        <legend>Calculadora de Cruzamientos</legend>
         Raza: 
         <select name="Raza" id='R' onchange='enableOther()'>
             <option>Pietrain</option>
@@ -109,9 +111,10 @@
         </select>
         <br><br>
         <input type='button' value='Calcular' onclick='croosIndexCalc()'/>
+        <br><br>
         <input type='text' id="res"/>
     </fieldset>
     </form>
-    <iframe id='pantalla' name='pantalla' src='' width=900px height=400px frameborder='0' scrolling='no'></iframe>
+    <iframe id='pantalla' name='pantalla' src='' frameborder='0' scrolling='no'></iframe>
     </body>
 </html>
